@@ -6,21 +6,22 @@ export default class NavBar extends React.Component{
   }
 
   render() {
+    var setCurrentMarkdown = this.props.setCurrentMarkdown;
     var markdownFiles = this.props.markdownFiles.map(function(file){
       return (
-        <div className="item" key={file} onClick={() => this.props.setCurrentMarkdown(file)}>
-          {file.file}
+        <div className="item" key={file.title} onClick={() => setCurrentMarkdown(file.file)}>
+          {file.title}
         </div>);
     });
 
     return (
-      <div className="ui inverted menu navbar centered grid orange">
+      <div className="ui inverted menu navbar centered grid orange ">
         <div className="ui container wrapNavbar">
           <a className="brand item largefont">Mardown Demo</a>
           <a className="ui dropdown item">
-            Choose .md file
+          <div className="default text">Select file</div>
             <i className="dropdown icon"></i>
-            <div className="menu" onClick={() => get}>
+            <div className="menu">
               {markdownFiles}
             </div>
           </a>
