@@ -1,7 +1,6 @@
 # markdown-react-demo
 
-This demo shows you a way of using markdown files with ReactJS. For more informations, check out my [blog entry about it](http://vulgairedev.fr/blog/article/markdown-pages-react).
-
+This demo shows you a way of using markdown files with ReactJS. 
 ## How to use ?
 All you need is npm.
 
